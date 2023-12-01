@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Brings in my selected google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta charset="utf-8">  
+
+    <title>Helpdesk | Home</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- full-size monitor style sheet-->
+    <link href="/content/Style.css" rel="stylesheet" type="text/css" media="only screen and
+    (min-width:960px)">
+    <!-- tablet style sheet-->
+    <link href="/content/tablet.css" rel="stylesheet" type="text/css" media="only screen
+    and (min-width:481px) and (max-width:960px)">
+    <!-- phone style sheet-->
+    <link href="/content/phone.css" rel="stylesheet" type="text/css" media="only screen
+    and (max-width:480px)">
+ </head>
+ <%- include('partials/header') %>
+ <body>
+<!-- Main container for home page -->
+    <div class="introcontainer">
+    <div class="introtoname">
+      <!-- name introduction -->
+      <h2>Welcome to the</h2>
+      <h1>OTU Helpdesk</h1>
+    </div>
+    <!-- about me button -->
+    <div class="aboutbutton">
+      <button onclick="window.location.href = '/assignments'">Tickets</button>
+    </div>
+  
+  <!-- homepage image -->
+    <div class="homeimage" style = "position:absolute; top:150px; left:-100px;" >
+      <img src="/assets/images/helpng.png" alt="IMAGE UNAVAILABLE" width="350">
+    </div>
+  </div>
+<!-- footer -->
+</body>
+<%- include('partials/footer') %>
+</html>

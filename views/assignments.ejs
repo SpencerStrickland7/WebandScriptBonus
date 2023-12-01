@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Brings in my selected google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta charset="utf-8">  
+        <title>Helpdesk | Tickets</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- full-size monitor style sheet-->
+    <link href="/content/Style.css" rel="stylesheet" type="text/css" media="only screen and
+    (min-width:960px)">
+    <!-- tablet style sheet-->
+    <link href="/content/tablet.css" rel="stylesheet" type="text/css" media="only screen
+    and (min-width:481px) and (max-width:960px)">
+    <!-- phone style sheet-->
+    <link href="/content/phone.css" rel="stylesheet" type="text/css" media="only screen
+    and (max-width:480px)">
+  </head>
+ <%- include('partials/header') %>
+  <body>
+    <div class="assignmentcontainer">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1> Tickets </h1><br>
+          <div class="assignaddbutton">
+          <button class="btn btn-success" onclick="window.location.href='/newassignment'">New</button>
+        </div>
+        <table class="table table-bordered table-striped table-hover">
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Number</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">Technician</th>
+            <th class="text-center">Status</th>
+            <th class="text-center">Edit</th>
+            <th class="text-center">Delete</th>
+          </tr>
+          <% for (let count = 0; count < assignList.length; count++) { %>
+            <tr>
+              <td class="text-center"><%= assignList[count].name %></td>
+              <td class="text-center"><%= assignList[count].description %></td>
+              <td class="text-center"><%= assignList[count].number %></td>
+              <td class="text-center"><%= assignList[count].email %></td>
+              <td class="text-center"><%= assignList[count].technician %></td>
+              <td class="text-center"><%= assignList[count].status %></td>
+              <td class="text-center">
+                <a href="/editassignment/<%= encodeURIComponent(assignList[count]._id) %>">
+                  <button class="btn btn-primary">Edit</button>                </td>
+              <td class="text-center">
+                <button onclick="confirmDelete('<%= assignList[count]._id %>')">Delete</button>
+              </td>
+            </tr>
+          <% } %>
+        </table>
+<!--a script for confirmation -->
+<script>
+  function confirmDelete(assignmentId) {
+    const isConfirmed = confirm('Are you sure you want to delete this Ticket?');
+
+    if (isConfirmed) {
+      window.location.href = '/assignments/delete/' + assignmentId;
+    }
+  }
+</script>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <%- include('partials/footer') %>
+  </body>
+</html>

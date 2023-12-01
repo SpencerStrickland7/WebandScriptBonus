@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>New Ticket</title>
+     <!-- Brings in my selected google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+         <title>Helpdesk |  New Ticket</title>
+     <meta name="viewport" content="width=device-width">
+     <!-- full-size monitor style sheet-->
+     <link href="/content/Style.css" rel="stylesheet" type="text/css" media="only screen and
+     (min-width:960px)">
+     <!-- tablet style sheet-->
+     <link href="/content/tablet.css" rel="stylesheet" type="text/css" media="only screen
+     and (min-width:481px) and (max-width:960px)">
+     <!-- phone style sheet-->
+     <link href="/content/phone.css" rel="stylesheet" type="text/css" media="only screen
+     and (max-width:480px)">
+</head>
+<%- include('partials/header') %>
+<body>
+    <div class="addassignment">
+    <h1>New Ticket</h1>
+    <form action="/assignments/new" method="post">
+        <!--form fields for the new assignment -->
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        
+        <label for="description">Description:</label>
+        <input type="text" name="description" required>
+
+        <label for="number">Number</label>
+        <input type="number" name="number" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+
+        <label for="technician">Technician</label>
+        <input type="text" name="technician" required>
+
+        <label for="status">Status</label>
+        <input type="text" name="status" required>        
+        <button type="submit">Save</button>
+    </form>
+    </div>
+</body>
+<%- include('partials/footer') %>
+
+</html>

@@ -1,0 +1,377 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Styling for the whole body */
+body {
+    text-size-adjust: none; 
+    height: 100%;
+    background-color: black;
+    /* gradient*/
+    background: linear-gradient(#63c0fa, #C2E5F2);
+        /*assigns fonts from importeed google fonts */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    width: 100%;
+} 
+/* all footer styling*/
+footer{
+    text-align: center;
+    padding: 3px;
+    background-color: #444;
+    color: #F2E0D5;
+    font-size: 16px;
+}
+/* start of navbar styling*/
+.headercontainer{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    background: #444;
+}
+/*intitialization of hover animation */
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* my name at top of page*/
+.logo{
+    float: left;
+    padding: 8px 0;
+}
+.list{
+    float: right;
+}
+/* navbar list*/
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* navbar list items*/
+nav li{
+    display: inline-block;
+    margin-left: 12px ;
+    padding-top: 19px;
+    position: relative;
+}
+/*nav buttons */
+nav a {
+    color: #F2E0D5;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+nav a:hover{
+    color: #000;
+}
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+nav a:hover::before{
+    width: 100%;
+}
+
+/* home page main container*/
+.introcontainer{
+    padding: 0px;
+    width: 50%;
+    margin: 50px auto;
+    flex-basis: 60%;
+    padding-bottom: 168%;
+    font-size: 25px;
+}
+/* box of image on home page*/
+.homeimage{
+    flex-basis: 40%;
+    padding: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    margin-top: 300px;
+    margin-left: 112px;
+}
+/* image on homepage*/
+.homeimage img{
+    border: 8px #F2E0D5;
+    border-style: double;
+}
+/* button on homepage redirecting to about me */
+.introcontainer button{
+    background: #F2E0D5;
+    width: 200px;
+    height: 200px;
+    border: none;
+    outline: none;
+    color: #444;
+    font-size: 20px;
+    height: 30px;
+    border-radius: 25px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(19, 19, 20, 0.3);
+}
+.assignmentcontainer {
+    padding: 20px;
+    margin-bottom: 500px;
+  }
+  .assignmentcontainer table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F2E0D5;
+  }
+  .assignmentcontainer table th {
+    text-align: center;
+    background-color: #444;
+    color: #F2E0D5;
+    padding: 10px;
+  }
+  .assignmentcontainer table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #F2E0D5;
+  }
+  .assignmentcontainer table tr:nth-child(even) {
+    background-color: #F2E0D5;
+  }
+  .assignmentcontainer table tr:hover {
+    background-color: #cce5ff;
+  }
+    .assignmentcontainer {
+      padding: 10px;
+      padding-bottom: 450px;
+      margin-bottom: 0; 
+    }
+    .assignmentcontainer table th {
+      padding: 5px;
+      font-size: 10px; 
+    }
+    .assignmentcontainer table td {
+      padding: 5px;
+      font-size: 10px; 
+    }  
+    .assignmentcontainer2 {
+        padding: 10px;
+        margin-bottom: 300px;
+    }
+    .assignmentcontainer table tr:nth-child(even) {
+        background-color: #F2E0D5;
+      }
+      .assignmentcontainer table tr:hover {
+        background-color: #cce5ff;
+      }
+      .assignmentcontainer table tr button{
+        background: #444;
+        width: 25px;
+        font-size: 7px;
+        border: none;
+        outline: none;
+        color: #F2E0D5;
+        height: 15px;
+        border-radius: 15px;
+        margin-top: 5px;
+        box-shadow: 0px 5px 15px 0px rgba(190, 189, 195, 0.3);
+      }
+      .assignaddbutton button{
+        float: right;
+        background: #F2E0D5;
+        width: 100px;
+        border: none;
+        outline: none;
+        color: #444;
+        height: 30px;
+        border-radius: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0px 5px 15px 0px rgba(190, 189, 195, 0.3);
+      }
+        .assignmentcontainer2 {
+            padding: 20px;
+            margin-bottom: 500px;
+        }
+        .assignmentcontainer2 form {
+            background-color: #F2E0D5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px 0px rgba(190, 189, 195, 0.3);
+        }
+        .assignmentcontainer2 label {
+            display: block;
+            margin-bottom: 6px;
+            color: #444;
+        }
+        .assignmentcontainer2 input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #444;
+            outline: none;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            background-color: #F2E0D5;
+        }
+        .assignmentcontainer2 input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        .assignmentcontainer2 button {
+            background: #444;
+            width: 100px;
+            border: none;
+            outline: none;
+            color: #F2E0D5;
+            height: 30px;
+            border-radius: 25px;
+            margin-top: 20px;
+            box-shadow: 0px 5px 15px 0px rgba(190, 189, 195, 0.3);
+        }
+        .assignmentcontainer2 button:hover {
+            background-color: #666;
+        }
+          /* Heading style */
+  .addassignment h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #000;
+}
+/* Form styling */
+.addassignment form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Label styling */
+.addassignment label {
+    display: block;
+    margin: 10px 0;
+    color: #444;
+}
+/* Input styling */
+.addassignment input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Button styling */
+.addassignment button {
+    background-color: #F2E0D5;
+    color: #444;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Button hover effect */
+.addassignment button {
+    background: #F2E0D5;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #444;
+    height: 30px;
+    border-radius: 25px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(190, 189, 195, 0.3);
+}
+
+/*LOGIN STYLING*/
+.logincontainer {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 400px;
+  }
+  
+  .alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  
+  .loginrow {
+    margin-bottom: 20px;
+  }
+  
+  .logincontainer h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .logincontainer form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .logincontainer label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .butn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .butn-success {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .butn-warning {
+    background-color: #ff0707;
+    color: #333;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .logincontainer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .logincontainer a:hover {
+    text-decoration: underline;
+  }
+  
+  

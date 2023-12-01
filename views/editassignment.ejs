@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+     <!-- Brings in my selected google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+         <title>Helpdesk | Edit Ticket</title>
+     <meta name="viewport" content="width=device-width">
+     <!-- full-size monitor style sheet-->
+     <link href="/content/Style.css" rel="stylesheet" type="text/css" media="only screen and
+     (min-width:960px)">
+     <!-- tablet style sheet-->
+     <link href="/content/tablet.css" rel="stylesheet" type="text/css" media="only screen
+     and (min-width:481px) and (max-width:960px)">
+     <!-- phone style sheet-->
+     <link href="/content/phone.css" rel="stylesheet" type="text/css" media="only screen
+     and (max-width:480px)">
+    <title>Edit Assignment</title>
+</head>
+<%- include('partials/header') %>
+<body>
+  <div class="assignmentcontainer2">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <h1>Edit Assignment</h1><br>
+
+        <!-- Form for editing assignment -->
+        <form action="/editassignment/<%= encodeURIComponent(assignment._id) %>" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= assignment.name %>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" id="description" name="description" value="<%= assignment.description %>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="number">Number:</label>
+            <input type="number" class="form-control" id="number" name="number" value="<%= assignment.number %>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" name="email" value="<%= assignment.email %>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="technician">Technician:</label>
+            <input type="text" class="form-control" id="technician" name="technician" value="<%= assignment.technician %>" required>
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status:</label>
+            <input type="text" class="form-control" id="status" name="status" value=" <%= assignment.status %>" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<%- include('partials/footer') %>
+</html>
